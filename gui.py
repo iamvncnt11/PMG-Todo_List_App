@@ -2,7 +2,7 @@ import functions
 import FreeSimpleGUI as sg
 
 label = sg.Text('Type in a to-do')
-input_box = sg.InputText(tooltip = 'Enter todo')
+input_box = sg.InputText(tooltip = 'Enter todo', key = 'todo')
 add_button = sg.Button('Add')
 
 window = sg.Window('My To-Do App',
@@ -10,6 +10,6 @@ window = sg.Window('My To-Do App',
                              [input_box, add_button]],
                    font = ('Helvetica',20))
 
-window.Read()
+event, values = window.Read()
 print('Hello')
 window.Close()

@@ -1,11 +1,11 @@
 FILEPATH = 'todos.txt'
 
-def read_todos():
-    with open(FILEPATH,'r') as file:
-        todos = file.read()
+def read_todos(filepath = FILEPATH):
+    with open(filepath,'r') as file:
+        todos = file.readlines()
     return todos
 
 
-def write_todos(todo_list):
-    with open(FILEPATH,'w') as file:
-        file.write(todo_list)
+def write_todos(todo_list, filepath = FILEPATH):
+    with open(filepath,'w') as file:
+        file.writelines(todo_list)
